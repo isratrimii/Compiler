@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+bool is_a_star(const char *str) {
+    for (int i = 0; str[i]; i++) {
+        if (str[i] != 'a') return false;
+    }
+    return true;
+}
+
+
+bool is_a_star_b_plus(const char *str) {
+    int i = 0;
+
+    
+    while (str[i] == 'a') {
+        i++;
+    }
+
+    
+    if (str[i] != 'b') return false;
+
+    
+    while (str[i] == 'b') {
+        i++;
+    }
+
+    
+    return str[i] == '\0';
+}
+
+int main() {
+    char input[100];
+    printf("Enter a string: ");
+    scanf("%s", input);
+
+    if (strcmp(input, "abb") == 0 ||
+        is_a_star(input) ||
+        is_a_star_b_plus(input)) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
+
+    
+
