@@ -1,0 +1,124 @@
+#include <bits/stdc++.h>
+#include <cmath>
+using namespace std;
+// Arithmetic operations
+int riadd(int x, int y) {
+return x + y;
+}
+int risub(int x, int y) {
+return x - y;
+}
+int rimul(int x, int y) {
+return x * y;
+}
+float ridiv(int x, int y) {
+if (y == 0) {
+cerr << "Error: Division by zero\n";
+return INFINITY;
+}
+return static_cast<float>(x) / y;
+}
+int rimodulus(int x, int y) {
+return x % y;
+}
+double ripower(double base, double exponent) {
+return pow(base, exponent);
+}
+float risqr(float x) {
+return sqrt(x);
+}
+// Comparison operations
+int rimaximum(int x, int y) {
+return max(x, y);
+}
+int riminimum(int x, int y) {
+return min(x, y);
+}
+// Mathematical functions
+int riabsolute(int x) {
+return abs(x);
+}
+int rifloor(float x) {
+return floor(x);
+}
+int riceiling(float x) {
+return ceil(x);
+}
+int riround(float x) {
+return round(x);
+}
+// Trigonometric functions (angles in degrees)
+double risine(double angle) {
+return sin(angle * M_PI / 180.0);
+}
+double ricos(double angle) {
+return cos(angle * M_PI / 180.0);
+}
+double ritan(double angle) {
+return tan(angle * M_PI / 180.0);
+}
+// Logarithmic functions
+double rilog(double x) {
+return log10(x);
+}
+double riln(double x) {
+return log(x);
+}
+double riexp(double x) {
+return exp(x);
+}
+// Factorial (iterative to avoid recursion overflow)
+unsigned long long rifact(int x) {
+if (x < 0) return 0; // Undefined for negative numbers
+unsigned long long result = 1;
+for (int i = 1; i <= x; ++i)
+result *= i;
+return result;
+}
+// Logical operations
+bool riand(bool a, bool b) {
+return a && b;
+}
+bool rior(bool a, bool b) {
+return a || b;
+}
+bool rinot(bool a) {
+return !a;
+}
+bool rixor(bool a, bool b) {
+return a ^ b;
+}
+// Equality check
+bool riequalcheck(int a, int b) {
+return a == b;
+}
+int main() {
+int a = 10, b = 3;
+float f = 9.7;
+cout << "riadd: " << riadd(a, b) << endl;
+cout << "risub: " << risub(a, b) << endl;
+cout << "rimul: " << rimul(a, b) << endl;
+cout << "ridiv: " << ridiv(a, b) << endl;
+cout << "rimodulus: " << rimodulus(a, b) << endl;
+cout << "ripower: " << ripower(a, b) << endl;
+cout << "risqr: " << risqr(a) << endl;
+cout << "rimaximum: " << rimaximum(a, b) << endl;
+cout << "riminimum: " << riminimum(a, b) << endl;
+cout << "riabsolute: " << riabsolute(-a) << endl;
+cout << "rifloor: " << rifloor(f) << endl;
+cout << "riceiling: " << riceiling(f) << endl;
+cout << "riround: " << riround(f) << endl;
+cout << "risine(30°): " << risine(30) << endl;
+cout << "ricos(60°): " << ricos(60) << endl;
+cout << "ritan(45°): " << ritan(45) << endl;
+cout << "rilog(100): " << rilog(100) << endl;
+cout << "riln(e): " << riln(M_E) << endl;
+cout << "riexp(1): " << riexp(1) << endl;
+cout << "rifact(5): " << rifact(5) << endl;
+cout << "riand(true, false): " << riand(true, false) << endl;
+cout << "rior(true, false): " << rior(true, false) << endl;
+cout << "rinot(true): " << rinot(true) << endl;
+cout << "rixor(true, false): " << rixor(true, false) << endl;
+cout << "riequalcheck(10, 10): " << riequalcheck(10, 10) << endl;
+return 0;
+}
